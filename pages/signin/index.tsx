@@ -21,7 +21,7 @@ const Index: React.FC = () => {
       <SimpleGrid height='100%' columns={2} spacing={0}>
         <Box height='100vh'>
         <Image
-          src='/images/loginPartImg.png'
+          src='/images/signin/loginPartImg.png'
           alt='loginPartTopImage'
         />
 
@@ -51,7 +51,7 @@ const Index: React.FC = () => {
                         align={'start'}
                         justify={'space-between'}>
                         <Checkbox>Remember me</Checkbox>
-                        <Link color={'blue.400'}>Forgot password?</Link>
+                        <Link color={'#3A57E8'}>Forgot password?</Link>
                       </Stack>
                       <Center>
                         <Button
@@ -69,18 +69,50 @@ const Index: React.FC = () => {
                           or sign in with other accounts?
                         </Text>
                       </Center>
-                      <Center bg={'red'} mt={'40px'}>
-                        <Flex>
+                      <Center>
+                        <Flex  gap='5'>
                           <Link as={NextLink} href='/home'>
-                            Home
+                            <Image
+                              borderRadius='full'
+                              boxSize='30px'
+                              src='/images/signin/Gmail.png'
+                              alt='Dan Abramov'
+                              onClick={() => console.log('you click image')}
+                            />
                           </Link>
                           <Link as={NextLink} href='/home'>
-                            Home
+                            <Image
+                                borderRadius='full'
+                                boxSize='30px'
+                                src='/images/signin/Facebook.png'
+                                alt='Dan Abramov'
+                                onClick={() => console.log('you click image')}
+                              />
                           </Link>
                           <Link as={NextLink} href='/home'>
-                            Home
+                            <Image
+                                borderRadius='full'
+                                boxSize='30px'
+                                src='/images/signin/Instagram.png'
+                                alt='Dan Abramov'
+                                onClick={() => console.log('you click image')}
+                              />
+                          </Link>
+                          <Link as={NextLink} href='/home'>
+                            <Image
+                                borderRadius='full'
+                                boxSize='30px'
+                                src='/images/signin/LinkedIn.png'
+                                alt='Dan Abramov'
+                                onClick={() => console.log('you click image')}
+                              />
                           </Link>
                         </Flex>
+                      </Center>
+                      <Center>
+                      <Text fontSize={'lg'} color={'#232D42'}>
+                        Don’t have an account? <Link color={'#3A57E8'}>Click here to sign up.</Link>
+                      </Text>
                       </Center>
                     </Stack>
                   </Stack>
@@ -93,7 +125,7 @@ const Index: React.FC = () => {
         <Image
           height='100vh'
           width='100vw'
-          src='/images/loginSideImg.png'
+          src='/images/signin/loginSideImg.png'
           alt='loginPartTopImage'
         />
         </Box>
