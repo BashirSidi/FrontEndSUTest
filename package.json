@@ -4,9 +4,17 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@chakra-ui/react": "^2.4.4",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "emotion-theming": "^11.0.0",
+    "framer-motion": "^6",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
