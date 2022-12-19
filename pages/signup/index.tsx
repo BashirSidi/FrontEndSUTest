@@ -19,10 +19,20 @@ const Index: React.FC = () => {
   return (
     <>
       <SimpleGrid height='100%' columns={2} spacing={0}>
+      <Box>
+        <Image
+          height='100vh'
+          width='100vw'
+          src='/images/signup/sideImage.png'
+          alt='loginPartTopImage'
+        />
+        </Box>
+
         <Box height='100vh'>
         <Image
-          src='/images/signin/loginPartImg.png'
-          alt='loginPartTopImage'
+          src='/images/signup/topImage.png'
+          alt='signupPartTopImage'
+          boxSize='300px'
         />
 
         <Flex
@@ -119,15 +129,6 @@ const Index: React.FC = () => {
                 </Box>
               </Stack>
             </Flex>
-        </Box>
-
-        <Box>
-        <Image
-          height='100vh'
-          width='100vw'
-          src='/images/signin/loginSideImg.png'
-          alt='loginPartTopImage'
-        />
         </Box>
       </SimpleGrid>
     </>
