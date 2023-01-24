@@ -1,47 +1,83 @@
-# TypeScript Next.js example
+# ViewTube With Upload Functionality Using Controlled Component
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+## Context
 
-## Deploy your own
+OTT – Over-the-top media is no longer the future of entertainment but is now the reality.​
+With over 50% of North Americans maintaining Netflix subscriptions, it is evident that the consumers love OTT content. It is the most popular form of entertainment today across all age groups. ​
+All that a consumer needs to have, is a compatible hardware device enabled with a good internet connection.​
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+An “over-the-top” media service is an online content provider that offers streaming media as a standalone product. An OTT conversation largely revolves around video-on-demand. However, it also supports audio, messaging, and VOIP.​
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+Any application or service that provides a product over the internet while bypassing traditional media services is an OTT application.​
+Popular OTT applications for video streaming are Netflix, Amazon Video, YouTube, HBO, etc.​
 
-## How to use it?
+The Front-end development team at eZone created the ViewTube application which rendered videos as cards with brief description, the number of views, the duration since it was published, and the length of video. The team was able to search for a particular video using the search box.​
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+The team now wants to add a new feature that can be used to quickly upload a new video with various details such as title, description, audience type, age restriction, tags, visibility, license and distribution.​
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-```
+As a React developer, you need to create a simple form to upload the videos and their details. You should ensure that all validations are checked properly and display appropriate validation error messages to the users to make the form user-friendly.​
 
-```bash
-yarn create next-app --example with-typescript with-typescript-app
-```
+## Problem Statement
 
-```bash
-pnpm create next-app --example with-typescript with-typescript-app
-```
+ This practice exercise is a continuation of the previous exercise where videos are styled and rendered using MUI design components. Create a video upload form to add a new video which has various fields as given in the boilerplate. Ensure that the submit button should be disabled if any input field is violating validation. Make sure that after the form submission, the newly added video is available in the Home page.​ Refer to the [ViewTube Upload Form Mockup](ViewZone-UploadForm.png) for UI requirements. Following are the things that learners have to complete:
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+1. Video upload form fields should contain
+    - Video url (Mandatory, Valid URL pattern)
+    - Video Thumbnail url (Valid URL pattern)
+    - Video Title (Mandatory, Max length:120)
+    - video Description
+    - Video Duration (valid duration pattern)
+    - Channel Title (Mandatory)
+    - Audience Type (Radio Button)
+        - Yes,its made for Kids
+        - Not for kids
+    - Age Restriction  (Radio Button)
+        - Yes, Restrict my videos to viewers over 18
+        - No, don't restrict my videos to viewers over 18  
+    - Tags (Chip list)
+    - Recording Date
+    - Video Location (Drop down for places) 
+    - License (Drop Down)
+        - Standard Viewtube License
+        - Creative Common License
+    - Distribution (Drop down)
+        - Everywhere
+        - Make this video available only on monetized platforms
+    - Video Category (Drop down)
+        - Film & Animation
+        - Autos & Vehicles
+        - Music
+        - Pets & Animals
+        - Sports
+        - Travel & Events
+        - Gaming
+        - People & Blogs
+        - Comedy
+        - Entertainment
+        - News & Politics
+        - Howto & Style
+        - Education
+        - Science & Technology
+        - Nonprofits & Activism 
+    - Visibility (Mandatory)
+        - private
+        - public
+2. Custom Validators should be used for form fields appropriately
+3. Custom validators has to be created to check that video url is of valid pattern
+   - Hint: Valid Url: https://www.youtube.com/embed/1ArVtCQqQRE
+4. On clicking the save button, valid form should be submitted. 
 
-## Notes
+### Instructions
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+1. Download and unzip the boilerplate code.
+2. Run the command npm install to install the dependencies. 
+3. Open the boilerplate code in VSCode to develop the assignment solution. 
+4. The boilerplate consists of the solution code for the ViewTube app. 
+5. The boilerplate also contains the videoColln.json file located inside the data folder.
+6. The video data is by default imported into the component, and you can use those data directly.
+7. Edit UploadView component in the component folder. 
+8. Edit UploadVideoView component in the views folder.
+9. Edit `App.js` and `VideoList.js`code to make the UploadVideoView component available when the `Upload Video` icon is clicked using the comments given in the boilerplate.
+10. Do not **change** the existing code in `App.js`,`ApplicationBar.js` files to ensure that codes are not broken while testing. 
+11. Zip the solution code with the name same as assignment name. 
+12. Upload the zipped solution for submission. 
